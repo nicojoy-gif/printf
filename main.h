@@ -62,6 +62,7 @@ int print_char(va_list l, flags_t *f);
 /* write_funcs */
 int _putchar(char c);
 int _puts(char *str);
+int buffer(char);
 
 /* utils.c */
 int _strlen(const char *);
