@@ -1,13 +1,19 @@
+.\" _printf man page /usr/share/man/man3/printf.3
+.\"
 .TH man 3 "17 April 2022" "ALX SOFTWARE ENGINEERING" "_PRINTF"
+
 .SH NAME
-.B _printf
-- formatted output conversion
+_printf
+
+.B _printf - formatted output conversion
+
 .SH SYNOPSIS
 .B #include \(dqholberton.h\(dq
 .sp
 .B int _printf(const char *
 .I format
 .B , ...);
+
 .SH DESCRIPTION
 The function _printf is a variadic function that produces a string according to a
 .I format
