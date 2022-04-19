@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * struct flags - struct containing flags to "turn on"
@@ -61,6 +62,11 @@ int print_char(va_list l, flags_t *f);
 /* write_funcs */
 int _putchar(char c);
 int _puts(char *str);
+
+/* utils.c */
+int _strlen(const char *);
+int print(char *);
+char *itoa(long int, int);
 
 /* print_custom */
 int print_rot13(va_list l, flags_t *f);
