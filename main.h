@@ -80,4 +80,43 @@ unsigned int print_string_width(buffer_t *output,
 		unsigned char flags, int wid, int prec, int size);
 unsigned int print_neg_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
+
+
+/* Conversion Specifier Functions */
+unsigned int convert_c(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_s(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_di(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_percent(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_b(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_u(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_o(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_x(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_X(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_S(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_p(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_r(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_R(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+
+/* Helper Functions */
+buffer_t *init_buffer(void);
+void free_buffer(buffer_t *output);
+unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
+unsigned int convert_sbase(buffer_t *output, long int num, char *base,
+		unsigned char flags, int wid, int prec);
+unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
+		unsigned char flags, int wid, int prec);
+
 #endif
